@@ -1,0 +1,20 @@
+nav {
+  background: black;
+  color: white;
+  padding: 1rem 2em;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav a {
+  display: inline-block;
+  background-color: darkred;
+  color: white;
+  margin: 0 0 0 1em;
+  padding: 0.5em 1em;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: crimson;
+}

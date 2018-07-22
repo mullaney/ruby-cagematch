@@ -1,0 +1,28 @@
+input[type="submit"] {
+  display: inline-block;
+  background-color: darkred;
+  color: white;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  &:hover {
+    background-color: crimson;
+  }
+}
+
+input[type="password"], input[type="email"] {
+  padding: 0.5em 1em;
+  margin: 0.2em 0em 1em;
+  outline: none;
+  display: block;
+  font-size: 1em;
+  width: 100%;
+  // max-width: 300px;
+}
+
+label {
+  font-size: 1em;
+}
+
+.field {
+  margin: 1rem 0;
+}
