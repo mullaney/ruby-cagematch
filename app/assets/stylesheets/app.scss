@@ -53,3 +53,17 @@ a:hover {
     font-size: 14pt;
   }
 }
+
+p.alert {
+  background: darkred;
+  color: white;
+  padding: 0.5em 1em;
+  font-style: italic;
+}
+
+p.notice {
+  background: darkgreen;
+  color: white;
+  padding: 0.5em 1em;
+  font-style: italic;
+}
