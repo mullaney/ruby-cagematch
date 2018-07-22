@@ -1,7 +1,7 @@
 nav {
   background: black;
   color: white;
-  padding: 1rem 2em;
+  padding: 1rem 1em;
   display: flex;
   justify-content: flex-end;
 }
@@ -17,4 +17,18 @@ nav a {
 
 nav a:hover {
   background-color: crimson;
+  color: white;
+  text-decoration: none;
+}
+
+@media only screen and (min-width : 768px) {
+  nav {
+    padding: 1rem 2em;
+  }
+  
+  nav a {
+    margin: 0 0 0 1em;
+    padding: 0.5em 1em;
+  }
+  
 }
