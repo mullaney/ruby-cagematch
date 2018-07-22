@@ -1,5 +1,9 @@
 language: ruby
 rvm:
   - 2.4
-scrpit:
+script:
   - bundle exec rspec
+
+deploy:
+  - provider: heroku
+  - secure: "Yk4O+2DNrrQzAYvVj3BRbwnMb+v0MOwxAocko8d7KgHkfK8bNwKi+EE7uA3YER2n1XVFIH85zNsg9uDQAcaPgvE86ow9OzhVaOm6xGcIKCIalIVFWrhaXNfQb7fIIG6uGWwfzsZbmWmAw01FO0W9bGXM+uKejUonq/BNRYZM5DsjiPRD+Lb525agzMbTq/PP/q/9LN74Sbn2rpMbyPME9WRKWXNrJ5gjNxm2eXbLIp9C7yEqk64EWzrOOHWvOhrkggwdxAhv3FWw9V5dxek6h1w2hSI5JBo4NyEruVB+j5rSe2vrSXU/ftl22YJjYBsazlIkMxbBMSMcnEXI40UZs+wtkxOgZtIXMbGtZ2Vg0qqExw7rrcGaOft6cdEfQh/28tQNK0hWmA2XWJ3QdH61YDpe8KOPmjf4zoYZ/WSTXkmXq4idypfH1PV1lnAJdCBjd9Der1vQhAjZlNw7xTCfDgR9GAvEs0s9ym4ik0NAWqTSHLigh36i82ql1dOhUpgVHOBtPey5eULGrcuGYDtxS1br1eN4HYLtCjJ096/7dV76JaD/frwdDuqklsPDFdo2mbLHc/+foyLsVg6mS/dYUapoM39QTLPE7d8n4zf62UOxgT8akcPDGCsGexHxewEh7ya85GEXCRdRW01oJR7RKqR0b2BlvpsqXyy1dlQM26c="
