@@ -1,5 +1,12 @@
 {
   "name": "RubyCagematch",
   "private": true,
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "husky": "^0.14.3"
+  },
+  "scripts": {
+    "precommit": "bundle exec rspec",
+    "prepush": "bundle exec rspec"
+  }
 }
