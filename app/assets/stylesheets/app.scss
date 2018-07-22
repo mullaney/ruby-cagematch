@@ -6,7 +6,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: gray;
-  font-size: 14pt;
+  font-size: 12pt;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -25,10 +25,10 @@ body {
 }
 
 .page-container {
-  margin: 2em;
+  margin: 1em;
   background-color: lightgray;
   width: 100%;
-  padding: 2em;
+  padding: 1em;
 }
 
 a {
@@ -48,5 +48,8 @@ a:hover {
 @media only screen and (min-width : 768px) {
   .page-container {
     width: 750px;
+    margin: 2em;
+    padding: 2em;
+    font-size: 14pt;
   }
 }

@@ -1,11 +1,14 @@
 input[type="submit"] {
   display: inline-block;
-  background-color: darkred;
+  background: darkred;
   color: white;
   padding: 0.5em 1em;
   text-decoration: none;
+  border: none;
+  border-radius: none;
   &:hover {
-    background-color: crimson;
+    background: crimson;
+    color: white;
   }
 }
 
