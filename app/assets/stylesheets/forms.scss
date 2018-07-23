@@ -1,4 +1,4 @@
-input[type="submit"] {
+input[type="submit"], a.btn {
   -webkit-appearance: none;
   display: inline-block;
   background: darkred;
@@ -29,4 +29,22 @@ label {
 
 .field {
   margin: 1rem 0;
+}
+
+a.btn-small {
+  font-size: 0.7em;
+}
+
+a.btn-view {
+  background: darkblue;
+  &:hover {
+    background: blue;
+  }
+}
+
+a.btn-edit {
+  background: darkgreen;
+  &:hover {
+    background: green;
+  }
 }

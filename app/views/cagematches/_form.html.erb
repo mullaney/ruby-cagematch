@@ -1,0 +1,77 @@
+<%= form_with(model: cagematch, local: true) do |form| %>
+  <% if cagematch.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cagematch.errors.count, "error") %> prohibited this cagematch from being saved:</h2>
+
+      <ul>
+      <% cagematch.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :cagematch_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :slug %>
+    <%= form.text_field :slug, id: :cagematch_slug %>
+  </div>
+
+  <div class="field">
+    <%= form.label :time_slot %>
+    <%= form.text_field :time_slot, id: :cagematch_time_slot %>
+  </div>
+
+  <div class="field">
+    <%= form.label :theater_name %>
+    <%= form.text_field :theater_name, id: :cagematch_theater_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :theater_url %>
+    <%= form.text_area :theater_url, id: :cagematch_theater_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :venue_address %>
+    <%= form.text_area :venue_address, id: :cagematch_venue_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :box_office_url %>
+    <%= form.text_area :box_office_url, id: :cagematch_box_office_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :box_office_phone_number %>
+    <%= form.text_field :box_office_phone_number, id: :cagematch_box_office_phone_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ticket_price_description %>
+    <%= form.text_field :ticket_price_description, id: :cagematch_ticket_price_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :show_description %>
+    <%= form.text_area :show_description, id: :cagematch_show_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :logo_url %>
+    <%= form.text_area :logo_url, id: :cagematch_logo_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :show_picture_url %>
+    <%= form.text_area :show_picture_url, id: :cagematch_show_picture_url %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

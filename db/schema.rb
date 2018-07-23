@@ -10,10 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180722182342) do
+ActiveRecord::Schema.define(version: 20180723004338) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "cagematches", force: :cascade do |t|
+    t.string "title"
+    t.string "slug"
+    t.string "time_slot"
+    t.string "theater_name"
+    t.text "theater_url"
+    t.text "venue_address"
+    t.text "box_office_url"
+    t.string "box_office_phone_number"
+    t.string "ticket_price_description"
+    t.text "show_description"
+    t.text "logo_url"
+    t.text "show_picture_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
