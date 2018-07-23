@@ -1,64 +1,45 @@
-<p id="notice"><%= notice %></p>
+<h1><%= @cagematch.title %></h1>
 
-<p>
-  <strong>Title:</strong>
-  <%= @cagematch.title %>
-</p>
+  <div class="resource-name">tag_line</div>
+  <div class="resource-data"><%= @cagematch.tag_line %></div>
 
-<p>
-  <strong>Slug:</strong>
-  <%= @cagematch.slug %>
-</p>
+  <div class="resource-name">time_slot</div>
+  <div class="resource-data"><%= @cagematch.time_slot %></div>
 
-<p>
-  <strong>Time slot:</strong>
-  <%= @cagematch.time_slot %>
-</p>
+  <div class="resource-name">slug</div>
+  <div class="resource-data"><%= @cagematch.slug %></div>
 
-<p>
-  <strong>Theater name:</strong>
-  <%= @cagematch.theater_name %>
-</p>
+  <div class="resource-name">theater_url</div>
+  <div class="resource-data"><%= @cagematch.theater_url %></div>
 
-<p>
-  <strong>Theater url:</strong>
-  <%= @cagematch.theater_url %>
-</p>
+  <div class="resource-name">theater_name</div>
+  <div class="resource-data"><%= @cagematch.theater_name %></div>
 
-<p>
-  <strong>Venue address:</strong>
-  <%= @cagematch.venue_address %>
-</p>
+  <div class="resource-name">venue_address</div>
+  <div class="resource-data"><%= @cagematch.venue_address %></div>
 
-<p>
-  <strong>Box office url:</strong>
-  <%= @cagematch.box_office_url %>
-</p>
+  <div class="resource-name">box_office_url</div>
+  <div class="resource-data"><%= @cagematch.box_office_url %></div>
 
-<p>
-  <strong>Box office phone number:</strong>
-  <%= @cagematch.box_office_phone_number %>
-</p>
+  <div class="resource-name">box_office_phone_number</div>
+  <div class="resource-data"><%= @cagematch.box_office_phone_number %></div>
 
-<p>
-  <strong>Ticket price description:</strong>
-  <%= @cagematch.ticket_price_description %>
-</p>
+  <div class="resource-name">ticket_price_description</div>
+  <div class="resource-data"><%= @cagematch.ticket_price_description %></div>
 
-<p>
-  <strong>Show description:</strong>
-  <%= @cagematch.show_description %>
-</p>
+  <div class="resource-name">ticket_price_description</div>
+  <div class="resource-data"><%= @cagematch.ticket_price_description %></div>
 
-<p>
-  <strong>Logo url:</strong>
-  <%= @cagematch.logo_url %>
-</p>
+  <div class="resource-name">show_description</div>
+  <div class="resource-data"><%= @cagematch.show_description %></div>
 
-<p>
-  <strong>Show picture url:</strong>
-  <%= @cagematch.show_picture_url %>
-</p>
+  <div class="resource-name">logo_url</div>
+  <div class="resource-data"><%= image_tag @cagematch.logo_url, class: 'resource-image' %></div>
 
-<%= link_to 'Edit', edit_cagematch_path(@cagematch) %> |
-<%= link_to 'Back', cagematches_path %>
+  <div class="resource-name">show_picture_url</div>
+  <div class="resource-data"><%= image_tag @cagematch.show_picture_url, class: 'resource-image' %></div>
+
+<div>
+  <%= link_to 'Edit', edit_cagematch_path(@cagematch), class: 'btn btn-edit' %>
+  <%= link_to 'Back', cagematches_path, class: 'btn btn-view' %>
+</div>

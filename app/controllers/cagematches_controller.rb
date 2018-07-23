@@ -69,6 +69,6 @@ class CagematchesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def cagematch_params
-      params.require(:cagematch).permit(:title, :slug, :time_slot, :theater_name, :theater_url, :venue_address, :box_office_url, :box_office_phone_number, :ticket_price_description, :show_description, :logo_url, :show_picture_url)
+      params.require(:cagematch).permit(:title, :slug, :time_slot, :theater_name, :theater_url, :venue_address, :box_office_url, :box_office_phone_number, :ticket_price_description, :show_description, :logo_url, :show_picture_url, :tag_line)
     end
 end

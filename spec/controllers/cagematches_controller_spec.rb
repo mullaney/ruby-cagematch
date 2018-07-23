@@ -105,6 +105,7 @@ RSpec.describe CagematchesController, type: :controller do
       let(:new_attributes) {
         {
           "title" => "my title",
+          "tag_line" => "A dangerous place",
           "slug" => "a-slug",
           "time_slot" => "Thursdays at 11",
           "theater_name" => "IRC Theater",
@@ -125,6 +126,7 @@ RSpec.describe CagematchesController, type: :controller do
         cagematch.reload
         expect(cagematch.title).to eq("my title")
         expect(cagematch.slug).to eq("a-slug")
+        expect(cagematch.tag_line).to eq("A dangerous place")
         expect(cagematch.time_slot).to eq("Thursdays at 11")
         expect(cagematch.theater_name).to eq("IRC Theater")
         expect(cagematch.theater_url).to eq("https://improv.example.com")
