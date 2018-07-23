@@ -1,74 +1,79 @@
 <%= form_with(model: cagematch, local: true) do |form| %>
   <% if cagematch.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(cagematch.errors.count, "error") %> prohibited this cagematch from being saved:</h2>
-
-      <ul>
-      <% cagematch.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+      <p class="alert"><%= pluralize(cagematch.errors.count, "error") %> prohibited this cagematch from being saved:
+        <ul>
+        <% cagematch.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </p>
     </div>
   <% end %>
 
   <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title, id: :cagematch_title %>
+    <%= form.label :title, class: "input-required" %>
+    <%= form.text_field :title, id: :cagematch_title, placeholder: 'Official show name', required: true %>
   </div>
 
   <div class="field">
-    <%= form.label :slug %>
-    <%= form.text_field :slug, id: :cagematch_slug %>
+    <%= form.label :tag_line %>
+    <%= form.text_field :tag_line, id: :cagematch_tag_line, placeholder: 'Slogan or sub title' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :slug, class: "input-required" %>
+    <%= form.text_field :slug, id: :cagematch_slug, placeholder: 'no spaces or symbols, just letters, numbers and dashes', required: true, pattern: "/[a..z-]+/" %>
   </div>
 
   <div class="field">
     <%= form.label :time_slot %>
-    <%= form.text_field :time_slot, id: :cagematch_time_slot %>
+    <%= form.text_field :time_slot, id: :cagematch_time_slot, placeholder: 'i.e. Thursdays at 11pm or Fridays at midnight' %>
   </div>
 
   <div class="field">
     <%= form.label :theater_name %>
-    <%= form.text_field :theater_name, id: :cagematch_theater_name %>
+    <%= form.text_field :theater_name, id: :cagematch_theater_name, placeholder: 'Host theater or theater company' %>
   </div>
 
   <div class="field">
     <%= form.label :theater_url %>
-    <%= form.text_area :theater_url, id: :cagematch_theater_url %>
+    <%= form.text_field :theater_url, id: :cagematch_theater_url, placeholder: 'Url for host theater' %>
   </div>
 
   <div class="field">
     <%= form.label :venue_address %>
-    <%= form.text_area :venue_address, id: :cagematch_venue_address %>
+    <%= form.text_field :venue_address, id: :cagematch_venue_address, placeholder: 'Address of the actual venue' %>
   </div>
 
   <div class="field">
     <%= form.label :box_office_url %>
-    <%= form.text_area :box_office_url, id: :cagematch_box_office_url %>
+    <%= form.text_field :box_office_url, id: :cagematch_box_office_url, placeholder: 'Link to where you can buy tickets' %>
   </div>
 
   <div class="field">
     <%= form.label :box_office_phone_number %>
-    <%= form.text_field :box_office_phone_number, id: :cagematch_box_office_phone_number %>
+    <%= form.text_field :box_office_phone_number, id: :cagematch_box_office_phone_number, placeholder: 'Box office number' %>
   </div>
 
   <div class="field">
     <%= form.label :ticket_price_description %>
-    <%= form.text_field :ticket_price_description, id: :cagematch_ticket_price_description %>
+    <%= form.text_field :ticket_price_description, id: :cagematch_ticket_price_description, placeholder: 'i.e. $5 in advance, $10 at the door' %>
   </div>
 
   <div class="field">
     <%= form.label :show_description %>
-    <%= form.text_area :show_description, id: :cagematch_show_description %>
+    <%= form.text_area :show_description, id: :cagematch_show_description, placeholder: 'All the details' %>
   </div>
 
   <div class="field">
     <%= form.label :logo_url %>
-    <%= form.text_area :logo_url, id: :cagematch_logo_url %>
+    <%= form.text_field :logo_url, id: :cagematch_logo_url, placeholder: 'A logo: url of png, jpg or gif' %>
   </div>
 
   <div class="field">
     <%= form.label :show_picture_url %>
-    <%= form.text_area :show_picture_url, id: :cagematch_show_picture_url %>
+    <%= form.text_field :show_picture_url, id: :cagematch_show_picture_url, placeholder: 'A picture of people performing or whatever else you want' %>
   </div>
 
   <div class="actions">
