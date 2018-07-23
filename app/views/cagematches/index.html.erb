@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cagematches</h1>
+
+<div class="flex-col">
+  <% @cagematches.each do |cagematch| %>
+    <div class="resource-list-item">
+      <div class="resource-list-name">
+        <%= link_to cagematch.title, cagematch %>
+      </div>
+      <div><%= cagematch.theater_name %></div>
+      <div class="resource-list-button-container">
+        <%= link_to 'Edit', edit_cagematch_path(cagematch), class: 'btn btn-small btn-edit' %>
+        <%= link_to 'Delete', cagematch, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-small' %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<p><%= link_to 'New Cagematch', new_cagematch_path, class: 'btn' %></p>

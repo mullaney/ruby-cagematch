@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @cagematch.title %>
+</p>
+
+<p>
+  <strong>Slug:</strong>
+  <%= @cagematch.slug %>
+</p>
+
+<p>
+  <strong>Time slot:</strong>
+  <%= @cagematch.time_slot %>
+</p>
+
+<p>
+  <strong>Theater name:</strong>
+  <%= @cagematch.theater_name %>
+</p>
+
+<p>
+  <strong>Theater url:</strong>
+  <%= @cagematch.theater_url %>
+</p>
+
+<p>
+  <strong>Venue address:</strong>
+  <%= @cagematch.venue_address %>
+</p>
+
+<p>
+  <strong>Box office url:</strong>
+  <%= @cagematch.box_office_url %>
+</p>
+
+<p>
+  <strong>Box office phone number:</strong>
+  <%= @cagematch.box_office_phone_number %>
+</p>
+
+<p>
+  <strong>Ticket price description:</strong>
+  <%= @cagematch.ticket_price_description %>
+</p>
+
+<p>
+  <strong>Show description:</strong>
+  <%= @cagematch.show_description %>
+</p>
+
+<p>
+  <strong>Logo url:</strong>
+  <%= @cagematch.logo_url %>
+</p>
+
+<p>
+  <strong>Show picture url:</strong>
+  <%= @cagematch.show_picture_url %>
+</p>
+
+<%= link_to 'Edit', edit_cagematch_path(@cagematch) %> |
+<%= link_to 'Back', cagematches_path %>
