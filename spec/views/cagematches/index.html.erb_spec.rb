@@ -5,7 +5,7 @@ RSpec.describe "cagematches/index", type: :view do
     assign(:cagematches, [
       Cagematch.create!(
         :title => "Title",
-        :slug => "Slug",
+        :slug => "slug",
         :time_slot => "Time Slot",
         :theater_name => "Theater Name",
         :theater_url => "MyText",
@@ -19,7 +19,7 @@ RSpec.describe "cagematches/index", type: :view do
       ),
       Cagematch.create!(
         :title => "Title",
-        :slug => "Slug",
+        :slug => "slug",
         :time_slot => "Time Slot",
         :theater_name => "Theater Name",
         :theater_url => "MyText",

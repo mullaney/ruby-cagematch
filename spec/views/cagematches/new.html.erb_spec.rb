@@ -4,7 +4,7 @@ RSpec.describe "cagematches/new", type: :view do
   before(:each) do
     assign(:cagematch, Cagematch.new(
       :title => "MyString",
-      :slug => "MyString",
+      :slug => "my-slug",
       :time_slot => "MyString",
       :theater_name => "MyString",
       :theater_url => "MyText",
@@ -25,17 +25,19 @@ RSpec.describe "cagematches/new", type: :view do
 
       assert_select "input[name=?]", "cagematch[title]"
 
+      assert_select "input[name=?]", "cagematch[tag_line]"
+
       assert_select "input[name=?]", "cagematch[slug]"
 
       assert_select "input[name=?]", "cagematch[time_slot]"
 
       assert_select "input[name=?]", "cagematch[theater_name]"
 
-      assert_select "textarea[name=?]", "cagematch[theater_url]"
+      assert_select "input[name=?]", "cagematch[theater_url]"
 
-      assert_select "textarea[name=?]", "cagematch[venue_address]"
+      assert_select "input[name=?]", "cagematch[venue_address]"
 
-      assert_select "textarea[name=?]", "cagematch[box_office_url]"
+      assert_select "input[name=?]", "cagematch[box_office_url]"
 
       assert_select "input[name=?]", "cagematch[box_office_phone_number]"
 
@@ -43,9 +45,9 @@ RSpec.describe "cagematches/new", type: :view do
 
       assert_select "textarea[name=?]", "cagematch[show_description]"
 
-      assert_select "textarea[name=?]", "cagematch[logo_url]"
+      assert_select "input[name=?]", "cagematch[logo_url]"
 
-      assert_select "textarea[name=?]", "cagematch[show_picture_url]"
+      assert_select "input[name=?]", "cagematch[show_picture_url]"
     end
   end
 end

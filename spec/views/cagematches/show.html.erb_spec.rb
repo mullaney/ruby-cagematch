@@ -4,7 +4,7 @@ RSpec.describe "cagematches/show", type: :view do
   before(:each) do
     @cagematch = assign(:cagematch, Cagematch.create!(
       :title => "Title",
-      :slug => "Slug",
+      :slug => "slug",
       :time_slot => "Time Slot",
       :theater_name => "Theater Name",
       :theater_url => "MyText",
@@ -21,7 +21,7 @@ RSpec.describe "cagematches/show", type: :view do
   it "renders attributes in <p>" do
     render
     expect(rendered).to match(/Title/)
-    expect(rendered).to match(/Slug/)
+    expect(rendered).to match(/slug/)
     # expect(rendered).to match(/Time Slot/)
     # expect(rendered).to match(/Theater Name/)
     # expect(rendered).to match(/MyText/)

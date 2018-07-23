@@ -48,3 +48,32 @@ a.btn-edit {
     background: green;
   }
 }
+
+.field label {
+  display: block;
+  font-size: .8em;
+  margin-left: 0.5em;
+}
+
+.field input, .field textarea  {
+  display: block;
+  background: #efefef;
+  border-top: 1px solid #aaa;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  min-height: 2em;
+  width: 100%;
+}
+
+.field textarea {
+  min-height: 8em;
+}
+
+label.input-required::after {
+  content: " *";
+  color: darkred;
+}
+
+form {
+  margin-bottom: 1em;
+}
