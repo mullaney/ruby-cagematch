@@ -15,6 +15,23 @@
   font-weight: bold;
 }
 
+.resource-name {
+  font-size: .7em;
+  margin-left: 0.5em;
+}
+
+.resource-data {
+  background: #efefef;
+  border-top: 1px solid #aaa;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  min-height: 2em;
+}
+
+.resource-image {
+  max-width: 100%;
+}
+
 // body {
 //   background-color: #fff;
 //   color: #333;
