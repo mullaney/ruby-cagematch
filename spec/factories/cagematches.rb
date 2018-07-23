@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :cagematch do
     title "MyString"
-    slug "MyString"
+    slug "my-slug"
     time_slot "MyString"
     theater_name "MyString"
     theater_url "MyText"

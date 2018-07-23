@@ -4,7 +4,7 @@ RSpec.describe "cagematches/new", type: :view do
   before(:each) do
     assign(:cagematch, Cagematch.new(
       :title => "MyString",
-      :slug => "MyString",
+      :slug => "my-slug",
       :time_slot => "MyString",
       :theater_name => "MyString",
       :theater_url => "MyText",

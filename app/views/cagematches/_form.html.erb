@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= form.label :slug, class: "input-required" %>
-    <%= form.text_field :slug, id: :cagematch_slug, placeholder: 'no spaces or symbols, just letters, numbers and dashes', required: true, pattern: "/[a..z-]+/" %>
+    <%= form.text_field :slug, id: :cagematch_slug, placeholder: 'no spaces or symbols, just letters, numbers and dashes', required: true, pattern: "[a-z0-9\-]+" %>
   </div>
 
   <div class="field">
