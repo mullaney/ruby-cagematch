@@ -89,4 +89,13 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # For cross origin resource sharing in dev environment
+  config.action_dispatch.default_headers = {
+    'Access-Control-Allow-Origin' => 'https://cage-match-client.netlify.com',
+    'Access-Control-Request-Method' => %w{GET}.join(",")
+  }
+  
 end
+
+
