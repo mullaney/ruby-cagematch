@@ -1,6 +1,7 @@
 ActiveAdmin.register User do
+  actions :all, except: [:new, :create, :destroy]
   permit_params :email
-  
+
   filter :email
   filter :last_sign_in_at
   filter :created_at
