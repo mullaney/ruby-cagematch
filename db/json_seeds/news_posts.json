@@ -1,8 +1,3 @@
-{
-    "type": "table",
-    "name": "news",
-    "database": "cagehost_main2",
-    "data": 
 [
 {
     "newsid": "1",
@@ -842,5 +837,3 @@
     "text": "Last week's Cage Match between returning champ Too Damn Much and challenger Promises ended with a tie score! Wowza! Official Cage Match Rule Number 9 states, in relevant part, \"In the event of a tie, there will be a rematch the following week.\" So this coming week's bout will be a Cage RE-Match between these two great teams. Come see Too Damn Much and Promises at it again this Thursday at 11:00 P.M.!\r\n\r\nThis is the first tie score at Cage Match since the March 10, 2005 contest between America! and Krompf. View the historical score and see which team won the rematch here: http:\/\/www.cage-match.com\/index.php?option=scores&season=2005\r\n\r\n"
 }
 ]
-
-}

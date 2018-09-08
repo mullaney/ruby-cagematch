@@ -5,13 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
 AdminUser.create!(
   email: 'kvinklly@gmail.com',
   password: 'password',
   password_confirmation: 'password'
 ) if Rails.env.development?
 
-Cagematch.create!(
+cagematch = Cagematch.create!(
   title: 'Cage-Match NYC',
   slug: 'ucbt-nyc',
   time_slot: 'Thursdays at 11pm',
@@ -26,3 +27,18 @@ Cagematch.create!(
   show_picture_url: 'http://cage-match.com/img/pcr3.gif',
   tag_line: 'The World\'s Most Dangerous Improv Show'
 )
+
+require "json"
+
+file = File.read(File.dirname(__FILE__) + '/json_seeds/news_posts.json')
+posts = JSON.parse(file)
+
+posts.each {|post|
+  Post.create!(
+    cagematch_id: cagematch['id'],
+    title: post['title'],
+    body: post['text'],
+    author: post['author'].present? ? post['author'] : 'CageMatch NYC',
+    published_at: Time.at(post['date'].to_i)
+  )
+}
