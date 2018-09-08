@@ -2,7 +2,7 @@
 
 API and admin for cage-match.com.
 
-API located at: [https://cage-match-api.herokuapp.com/]
+API located at: [https://cage-match-api.herokuapp.com/](https://cage-match-api.herokuapp.com/)
 
 ## Dev Notes
 
