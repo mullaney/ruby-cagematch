@@ -1,24 +1,23 @@
-# README
+# Cage-match API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+API and admin for cage-match.com.
 
-Things you may want to cover:
+API located at: [https://cage-match-api.herokuapp.com/]
 
-* Ruby version
+## Dev Notes
 
-* System dependencies
+To reset the db in development run:
 
-* Configuration
+```
+heroku restart && heroku pg:reset DATABASE --confirm cage-match-api && heroku run rake db:migrate && heroku run rake db:seed
+```
 
-* Database creation
+Then go into console and create the first admin user:
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+AdminUser.create!(
+  email: 'kvinklly@gmail.com',
+  password: '********',
+  password_confirmation: '********'
+)
+```
