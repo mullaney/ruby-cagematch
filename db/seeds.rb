@@ -42,3 +42,14 @@ posts.each {|post|
     published_at: Time.at(post['date'].to_i)
   )
 }
+
+file = File.read(File.dirname(__FILE__) + '/json_seeds/teams.json')
+teams = JSON.parse(file)
+
+teams.each {|team|
+  Team.create!(
+    cagematch_id: cagematch['id'],
+    name: team['name'],
+    tagline: team['tagline']
+  )
+}
